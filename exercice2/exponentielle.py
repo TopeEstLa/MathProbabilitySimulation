@@ -4,7 +4,7 @@ import numpy as np
 
 def sim_expo(lmbda, n):
     """
-    On a F(x) = 1 - exp(-lambda*x) = u  <=> x = -ln(1-u)/lambda
+    F(x) = 1 - exp(-lambda*x) = u  <=> x = -ln(1-u)/lambda
     Simulate random variables from an exponential law using the inverse transform method.
     :param lmbda:  Rate parameter of the exponential law
     :param n: Number of random variables to generate
@@ -21,11 +21,9 @@ def sim_expo(lmbda, n):
 
 def sim_tcl_expo(n, N, lmbd):
     """
-    S_n = somme de n variables exponentielles.
-    Z_n = (S_n - n*mu) / (sigma * sqrt(n))
-    Pour Expo(lambda): mu = 1/lambda, sigma^2 = 1/l
-    :param n_termes:
-    :param size:
+    Simulate random variables from the TCL of an exponential law using the inverse transform method.
+    :param n:
+    :param N:
     :param lmbd:
     :return:
     """

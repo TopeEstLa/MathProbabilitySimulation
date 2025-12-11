@@ -3,12 +3,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def gen_uniforme(N):
-    """Génère U ~ Uniforme(0,1)"""
+    """
+    Gen U ~ Uniforme(0,1)
+    :param N:
+    :return:
+    """
     return np.random.random(N)
 
 def sim_tcl_uniforme(n, N):
     """
-    simulation de la TCL pour une variable uniforme
+    Sim unforme law using TCL
+    :param n:
+    :param N:
+    :return:
     """
     mu = 0.5
     sigma = np.sqrt(1/12)
@@ -21,6 +28,11 @@ def sim_tcl_uniforme(n, N):
     return np.array(samples)
 
 def gaussian_density(x):
+    """
+    Gaussian density function
+    :param x:
+    :return:
+    """
     return (1 / np.sqrt(2 * np.pi)) * np.exp(-0.5 * x ** 2)
 
 def analyze_and_plot_tcl(data, bins=30):
