@@ -8,9 +8,7 @@ def gen_uniforme(N):
 
 def sim_tcl_uniforme(n, N):
     """
-    S_n = somme de n variables uniformes.
-    Z_n = (S_n - n*mu) / (sigma * sqrt(n))
-    Pour U[0,1]: mu = 0.5, sigma^2 = 1/12
+    simulation de la TCL pour une variable uniforme
     """
     mu = 0.5
     sigma = np.sqrt(1/12)
@@ -27,8 +25,6 @@ def gaussian_density(x):
 
 def analyze_and_plot_tcl(data, bins=30):
     """
-    theorical esperence for expo = 1/lambda
-    theorical var for expo = 1/lambda^2
     :param data:
     :param lmbda:
     :param bins:
@@ -37,8 +33,8 @@ def analyze_and_plot_tcl(data, bins=30):
     mean_emp = np.mean(data)
     var_emp = np.var(data)
 
-    print(f"Moyenne empirique : {mean_emp} espérance, {0}")
-    print(f"Variance empirique : {var_emp} Variance, {1}")
+    print(f"Moyenne empirique : {mean_emp} moyenne, {0}")
+    print(f"Variance empirique : {var_emp} sigma, {1}")
 
     plt.figure(figsize=(8, 5))
     count, bins, ignored = plt.hist(data, bins=bins, density=True, alpha=0.6, color='skyblue', edgecolor='black',
@@ -56,6 +52,6 @@ def analyze_and_plot_tcl(data, bins=30):
 
 if __name__ == "__main__":
     N = 10000
-    n = 100
+    n = 150
     samples = sim_tcl_uniforme(n, N)
     analyze_and_plot_tcl(samples)

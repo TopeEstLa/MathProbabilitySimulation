@@ -46,8 +46,6 @@ def gaussian_density(x):
 
 def analyze_and_plot_poisson(data, lmbd):
     """
-    theorical esperence for fish = lmbd
-    theorical var for fish = lmbd
     :param data:
     :param lmbda:
     :param bins:
@@ -55,8 +53,8 @@ def analyze_and_plot_poisson(data, lmbd):
     """
     mean_emp = np.mean(data)
     var_emp = np.var(data)
-    print(f"Moyenne empirique : {mean_emp} espérance, {lmbd}")
-    print(f"Variance empirique : {var_emp} Variance, {lmbd}")
+    print(f"Moyenne empirique : {mean_emp} espérance, {0}")
+    print(f"Variance empirique : {var_emp} Variance, {1}")
 
     plt.figure(figsize=(8, 5))
 
