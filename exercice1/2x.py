@@ -3,8 +3,8 @@ import numpy as np
 
 def sim_2x(n):
     """
-    On a F(x) = 2x = u  <=> x = sqrt(u)
-    Simulate random variables from an exponential law using the inverse transform method.
+    F(x) = 2x = u  <=> x = sqrt(u)
+    Simulate random variables from F(x) = 2x using the inverse transform method.
     :param n: Number of random variables to generate
     :return:
     """
@@ -18,6 +18,7 @@ def sim_2x(n):
 
 def density_2x(x):
     """
+    density of F(x) = 2x
     :param x: Value at which to evaluate the density
     :return: Density value at x
     """
@@ -25,7 +26,7 @@ def density_2x(x):
 
 def analyze_and_plot_2x(data, bins=30):
     """
-
+    analyze (calc mean & var) and plot data
     :param data:
     :param bins:
     :return:

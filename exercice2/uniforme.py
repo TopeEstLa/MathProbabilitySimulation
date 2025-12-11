@@ -25,6 +25,7 @@ def gaussian_density(x):
 
 def analyze_and_plot_tcl(data, bins=30):
     """
+    analyze (calc mean & var) and plot data
     :param data:
     :param lmbda:
     :param bins:

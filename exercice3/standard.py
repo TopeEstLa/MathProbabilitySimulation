@@ -3,9 +3,19 @@ import numpy as np
 import math
 
 def gen_uniforme(n_samples):
+    """
+    Gen U ~ Uniforme(0,1)
+    :param n_samples:
+    :return:
+    """
     return np.random.random(n_samples)
 
 def sim_box_muller_standard(size):
+    """
+    box muller standard normal distribution
+    :param size:
+    :return:
+    """
     count = size if size % 2 == 0 else size + 1
     u = gen_uniforme(count // 2)
     v = gen_uniforme(count // 2)
@@ -17,10 +27,16 @@ def sim_box_muller_standard(size):
     return np.concatenate([x, y])[:size] # Concact cause size is too high
 
 def gaussian_density(x):
+    """
+    Gaussian density function
+    :param x:
+    :return:
+    """
     return (1 / np.sqrt(2 * np.pi)) * np.exp(-0.5 * x ** 2)
 
 def analyze_and_plot_poisson(data):
     """
+    analyze (calc mean & var) and plot data
     :param data:
     :param lmbda:
     :param bins:

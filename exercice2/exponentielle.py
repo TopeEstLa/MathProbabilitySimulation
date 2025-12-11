@@ -46,6 +46,7 @@ def gaussian_density(x):
 
 def analyze_and_plot_poisson(data, lmbd):
     """
+    analyze (calc mean & var) and plot data
     :param data:
     :param lmbda:
     :param bins:

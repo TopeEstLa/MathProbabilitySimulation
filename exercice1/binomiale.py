@@ -31,6 +31,7 @@ def sim_binomiale(n, p, N):
 
 def density_binomiale(k, n, p):
     """
+    density of binomial law
     :param k: Value at which to evaluate the density
     :param n: Number of trials
     :param p: Probability of success on each trial
@@ -41,6 +42,7 @@ def density_binomiale(k, n, p):
 
 def analyze_and_plot_binomiale(data, n, p):
     """
+    analyze (calc mean & var) and plot data
     theorical esperence for bino = np
     theorical var for bino = np(1-p)
     :param data:

@@ -30,6 +30,7 @@ def sim_poisson(lmbd, N):
 
 def density_poisson(k, lmbd):
     """
+    density of poisson law
     :param k: Value at which to evaluate the density
     :param lmbd: Param of the Fish law
     :return: Density value at k
@@ -39,6 +40,7 @@ def density_poisson(k, lmbd):
 
 def analyze_and_plot_poisson(data, lmbd):
     """
+    analyze (calc mean & var) and plot data
     theorical esperence for fish = lmbd
     theorical var for fish = lmbd
     :param data:

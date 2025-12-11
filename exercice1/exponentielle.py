@@ -4,7 +4,7 @@ import numpy as np
 
 def sim_expo(lmbda, n):
     """
-    On a F(x) = 1 - exp(-lambda*x) = u  <=> x = -ln(1-u)/lambda
+    F(x) = 1 - exp(-lambda*x) = u  <=> x = -ln(1-u)/lambda
     Simulate random variables from an exponential law using the inverse transform method.
     :param lmbda:  Rate parameter of the exponential law
     :param n: Number of random variables to generate
@@ -21,6 +21,8 @@ def sim_expo(lmbda, n):
 
 def density_expo(x, lmbda):
     """
+    density of exponential law
+
     :param x: Value at which to evaluate the density
     :param lmbda: Param of the exponential law
     :return: Density value at x
@@ -32,6 +34,7 @@ def density_expo(x, lmbda):
 
 def analyze_and_plot_expo(data, lmbda, bins=30):
     """
+    analyze (calc mean & var) and plot data
     theorical esperence for expo = 1/lambda
     theorical var for expo = 1/lambda^2
     :param data:
